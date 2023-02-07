@@ -13,11 +13,11 @@
 		414283AD2990C0F200E57591 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 414283AC2990C0F200E57591 /* Preview Assets.xcassets */; };
 		414283B42990C27900E57591 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 414283B32990C27900E57591 /* GoogleService-Info.plist */; };
 		414283C12990C94B00E57591 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414283C02990C94B00E57591 /* ImagePicker.swift */; };
-		414283C32990DD1C00E57591 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414283C22990DD1C00E57591 /* ImageView.swift */; };
 		414283C52990E04600E57591 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414283C42990E04600E57591 /* LogInView.swift */; };
 		414283C82991135900E57591 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 414283C72991135900E57591 /* FirebaseAuth */; };
 		414283CA2991135900E57591 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 414283C92991135900E57591 /* FirebaseFirestore */; };
 		414283CC2991135900E57591 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 414283CB2991135900E57591 /* FirebaseStorage */; };
+		414283CE2991249400E57591 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414283CD2991249400E57591 /* FirebaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +28,8 @@
 		414283AC2990C0F200E57591 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		414283B32990C27900E57591 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		414283C02990C94B00E57591 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		414283C22990DD1C00E57591 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		414283C42990E04600E57591 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		414283CD2991249400E57591 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +70,9 @@
 				414283A52990C0F000E57591 /* RegisterWithImagePickerApp.swift */,
 				414283A72990C0F000E57591 /* ContentView.swift */,
 				414283C02990C94B00E57591 /* ImagePicker.swift */,
+				414283CD2991249400E57591 /* FirebaseManager.swift */,
 				414283A92990C0F200E57591 /* Assets.xcassets */,
 				414283AB2990C0F200E57591 /* Preview Content */,
-				414283C22990DD1C00E57591 /* ImageView.swift */,
 			);
 			path = RegisterWithImagePicker;
 			sourceTree = "<group>";
@@ -164,8 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				414283CE2991249400E57591 /* FirebaseManager.swift in Sources */,
 				414283C52990E04600E57591 /* LogInView.swift in Sources */,
-				414283C32990DD1C00E57591 /* ImageView.swift in Sources */,
 				414283C12990C94B00E57591 /* ImagePicker.swift in Sources */,
 				414283A82990C0F000E57591 /* ContentView.swift in Sources */,
 				414283A62990C0F000E57591 /* RegisterWithImagePickerApp.swift in Sources */,

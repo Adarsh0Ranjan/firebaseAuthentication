@@ -9,31 +9,31 @@ import UIKit
 import SwiftUI
 import Firebase
 import FirebaseStorage
-class FirebaseManager: NSObject {
-    
-    let auth: Auth
-    let storage: Storage
-    let firestore: Firestore
-    
-    static let shared = FirebaseManager()
-    
-    override init() {
-        FirebaseApp.configure()
-        
-        self.auth = Auth.auth()
-        self.storage = Storage.storage()
-        self.firestore = Firestore.firestore()
-        
-        super.init()
-    }
-    
-}
+//class FirebaseManager: NSObject {
+//    
+//    let auth: Auth
+//    let storage: Storage
+//    let firestore: Firestore
+//    
+//    static let shared = FirebaseManager()
+//    
+//    override init() {
+//        FirebaseApp.configure()
+//        
+//        self.auth = Auth.auth()
+//        self.storage = Storage.storage()
+//        self.firestore = Firestore.firestore()
+//        
+//        super.init()
+//    }
+//}
 
 struct LoginView: View {
     
     @State var isLoginMode = false
     @State var email = ""
     @State var password = ""
+    @State var loginStatusMessage = ""
     
     @State var shouldShowImagePicker = false
     
@@ -138,7 +138,7 @@ struct LoginView: View {
         }
     }
     
-    @State var loginStatusMessage = ""
+
     
     private func createNewAccount() {
         FirebaseManager.shared.auth.createUser(withEmail: email, password: password) { result, err in
@@ -157,7 +157,6 @@ struct LoginView: View {
     }
     
     private func persistImageToStorage() {
-//        let filename = UUID().uuidString
         guard let uid = FirebaseManager.shared.auth.currentUser?.uid else { return }
         let ref = FirebaseManager.shared.storage.reference(withPath: uid)
         guard let imageData = self.image?.jpegData(compressionQuality: 0.5) else { return }
@@ -166,7 +165,6 @@ struct LoginView: View {
                 self.loginStatusMessage = "Failed to push image to Storage: \(err)"
                 return
             }
-            
             ref.downloadURL { url, err in
                 if let err = err {
                     self.loginStatusMessage = "Failed to retrieve downloadURL: \(err)"
@@ -174,7 +172,7 @@ struct LoginView: View {
                 }
                 
                 self.loginStatusMessage = "Successfully stored image with url: \(url?.absoluteString ?? "")"
-                print(url?.absoluteString)
+                print(url?.absoluteString as Any)
                 
                 guard let url = url else { return }
                 self.storeUserInformation(imageProfileUrl: url)
@@ -192,7 +190,6 @@ struct LoginView: View {
                 self.loginStatusMessage = "\(err)"
                 return
             }
-            
             print("Success")
         }
     }
