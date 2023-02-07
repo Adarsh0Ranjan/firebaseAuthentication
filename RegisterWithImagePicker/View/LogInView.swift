@@ -9,38 +9,20 @@ import UIKit
 import SwiftUI
 import Firebase
 import FirebaseStorage
-//class FirebaseManager: NSObject {
-//    
-//    let auth: Auth
-//    let storage: Storage
-//    let firestore: Firestore
-//    
-//    static let shared = FirebaseManager()
-//    
-//    override init() {
-//        FirebaseApp.configure()
-//        
-//        self.auth = Auth.auth()
-//        self.storage = Storage.storage()
-//        self.firestore = Firestore.firestore()
-//        
-//        super.init()
-//    }
-//}
 
 struct LoginView: View {
-    
     @State var isLoginMode = false
     @State var email = ""
     @State var password = ""
     @State var loginStatusMessage = ""
     
+    // for image picker
     @State var shouldShowImagePicker = false
+    @State var image: UIImage?
     
     var body: some View {
         NavigationView {
             ScrollView {
-                
                 VStack(spacing: 16) {
                     Picker(selection: $isLoginMode, label: Text("Picker here")) {
                         Text("Login")
@@ -71,10 +53,10 @@ struct LoginView: View {
                             .overlay(RoundedRectangle(cornerRadius: 64)
                                         .stroke(Color.black, lineWidth: 3)
                             )
-                            
                         }
                     }
                     
+                    // user credentails
                     Group {
                         TextField("Email", text: $email)
                             .keyboardType(.emailAddress)
@@ -102,7 +84,6 @@ struct LoginView: View {
                         .foregroundColor(.red)
                 }
                 .padding()
-                
             }
             .navigationTitle(isLoginMode ? "Log In" : "Create Account")
             .background(Color(.init(white: 0, alpha: 0.05))
@@ -114,7 +95,7 @@ struct LoginView: View {
         }
     }
     
-    @State var image: UIImage?
+
     
     private func handleAction() {
         if isLoginMode {

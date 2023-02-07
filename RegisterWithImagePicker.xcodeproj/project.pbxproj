@@ -18,6 +18,8 @@
 		414283CA2991135900E57591 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 414283C92991135900E57591 /* FirebaseFirestore */; };
 		414283CC2991135900E57591 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 414283CB2991135900E57591 /* FirebaseStorage */; };
 		414283CE2991249400E57591 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414283CD2991249400E57591 /* FirebaseManager.swift */; };
+		414283D029923DB800E57591 /* SignedInUSIngApleId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414283CF29923DB800E57591 /* SignedInUSIngApleId.swift */; };
+		414283D229923E0800E57591 /* SignedInWIthEmailAndPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414283D129923E0800E57591 /* SignedInWIthEmailAndPassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		414283C02990C94B00E57591 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		414283C42990E04600E57591 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		414283CD2991249400E57591 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		414283CF29923DB800E57591 /* SignedInUSIngApleId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInUSIngApleId.swift; sourceTree = "<group>"; };
+		414283D129923E0800E57591 /* SignedInWIthEmailAndPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInWIthEmailAndPassword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +69,12 @@
 		414283A42990C0F000E57591 /* RegisterWithImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				414283B32990C27900E57591 /* GoogleService-Info.plist */,
-				414283C42990E04600E57591 /* LogInView.swift */,
-				414283A52990C0F000E57591 /* RegisterWithImagePickerApp.swift */,
 				414283A72990C0F000E57591 /* ContentView.swift */,
-				414283C02990C94B00E57591 /* ImagePicker.swift */,
-				414283CD2991249400E57591 /* FirebaseManager.swift */,
+				414283A52990C0F000E57591 /* RegisterWithImagePickerApp.swift */,
+				414283D529923FDA00E57591 /* ViewModel */,
+				414283D429923FCB00E57591 /* Helpers */,
+				414283D329923FB200E57591 /* View */,
+				414283B32990C27900E57591 /* GoogleService-Info.plist */,
 				414283A92990C0F200E57591 /* Assets.xcassets */,
 				414283AB2990C0F200E57591 /* Preview Content */,
 			);
@@ -83,6 +87,32 @@
 				414283AC2990C0F200E57591 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		414283D329923FB200E57591 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				414283C42990E04600E57591 /* LogInView.swift */,
+				414283D129923E0800E57591 /* SignedInWIthEmailAndPassword.swift */,
+				414283CF29923DB800E57591 /* SignedInUSIngApleId.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		414283D429923FCB00E57591 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				414283C02990C94B00E57591 /* ImagePicker.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		414283D529923FDA00E57591 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				414283CD2991249400E57591 /* FirebaseManager.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +196,8 @@
 			files = (
 				414283CE2991249400E57591 /* FirebaseManager.swift in Sources */,
 				414283C52990E04600E57591 /* LogInView.swift in Sources */,
+				414283D229923E0800E57591 /* SignedInWIthEmailAndPassword.swift in Sources */,
+				414283D029923DB800E57591 /* SignedInUSIngApleId.swift in Sources */,
 				414283C12990C94B00E57591 /* ImagePicker.swift in Sources */,
 				414283A82990C0F000E57591 /* ContentView.swift in Sources */,
 				414283A62990C0F000E57591 /* RegisterWithImagePickerApp.swift in Sources */,
